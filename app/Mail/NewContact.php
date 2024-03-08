@@ -33,7 +33,7 @@ class NewContact extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New Contact',
+            subject: 'Nuova email dal sito protfolio',
         );
     }
 
@@ -45,7 +45,7 @@ class NewContact extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.contact-email',
         );
     }
 
