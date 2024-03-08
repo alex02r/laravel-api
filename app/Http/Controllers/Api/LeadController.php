@@ -6,7 +6,6 @@ use App\Mail\NewContact;
 use App\Models\Lead;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use GrahamCampbell\ResultType\Success;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 
