@@ -18,7 +18,7 @@ class LeadController extends Controller
         $validator = Validator::make($data, [
             'name' => 'required',
             'surname' => 'required',
-            'email' => 'required',
+            'mail' => 'required',
             'mex' => 'required',
             'phone' => 'required'
         ]);
@@ -34,7 +34,10 @@ class LeadController extends Controller
         $new_lead->fill($data);
         $new_lead->save();
 
-        Mail::to('alex.giochi02@gmail.com')->send(new NewContact($new_lead));        
+        Mail::to('hello@example.com')->send(new NewContact($new_lead));        
 
+        return response()->json([
+            'success'=> true
+        ]);
     }
 }
