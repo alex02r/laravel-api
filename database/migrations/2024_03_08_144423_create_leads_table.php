@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('surname');
+            $table->string('phone');
+            $table->string('mail');
+            $table->text('mex');
             $table->timestamps();
         });
     }
